@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rossgrambo.com</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="home" class="flex-col relative">
+        <div class="canvas-holder absolute-center">
+            <canvas width="1000" height="500"></canvas>
+        </div>
+        <div class="flex-col bring-to-front">
+            <div class="flex-col text">
+                <span class="highlight">Ross Grambo</span>
+                Full Stack Developer
+                <a href="#about">
+                    <div class="border page-link text-- margin-top-xx">
+                        See more
+                    </div>
+                </a>
+                <p id="grid-note" class="text---">*Try Clicking and Dragging on this background!*</p>
+            </div>
+        </div>
+        <script src="home.js"></script>
+    </section>
+    <nav id="nav">
+        <div class="menu flex-row">
+            <a href="#home"><div class="page-link">home</div></a>
+            <a href="#about"><div class="page-link">about</div></a>
+            <a href="#portfolio"><div class="page-link">projects</div></a>
+            <a href="#contact"><div class="page-link">contact</div></a>
+        </div>
+        <div class="right">
+            <a id="randomize-theme"><div class="page-link">Randomize Theme</div></a>
+        </div>
+    </nav>
+    <section id="about" class="flex relative">
+        <div class="container flex">
+            <div class="header flex will-slide-in-left">
+                <h1>About</h1>
+            </div>
+            <div class="content flex-row will-fade-in">
+                <div id="about-portrait" class="flex-col">
+                    <img src="about-me.jpg"/>
+                    <span class="highlight-dark">Here is my girlfriend, my dog, and me!</span>
+                    <p>A Software Engineer working for Echo Technology Solutions in San Francisco.</p>
+                </div>
+                <div id="sunburst" class="flex-col">
+                    <div id="main">
+                        <div id="sequence"></div>
+                        <div id="chart"></div>
+                    </div>
+                    <div id="sunburst-note" class="text---">
+                        *try hovering over this circle*
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="about.js"></script>
+    </section>
+
+    <section id="portfolio" class="flex relative">
+        <div class="container flex">
+            <div class="header flex will-slide-in-left">
+                <h1>Projects</h1>
+            </div>
+            <div class="flex-row sample-holder will-fade-in">
+                <div class="sample">
+                    <div class="flex-col">
+                        <div class="text-">
+                            ImBlaze
+                        </div>
+                        <div class="border page-link text-- margin-top-xx">
+                            Learn More
+                        </div>
+                    </div>
+                    <a href="https://www.imblaze.org/">
+                        <img src="imblaze.png">
+                    </a>
+                </div>
+                <div class="sample">
+                    <div class="flex-col">
+                        <div class="text-">
+                            Monterey Peninsula Foundation
+                        </div>
+                        <div class="border page-link text-- margin-top-xx">
+                            Learn More
+                        </div>
+                    </div>
+                    <a href="https://portal.mpfca.org/sponsor/s/login/?startURL=%2Fsponsor%2Fs%2F&ec=302">
+                        <img src="mpf-screenshot.PNG">
+                    </a>
+                </div>
+                <div class="sample">
+                    <div class="flex-col">
+                        <div class="text-">
+                            Birch Equipment
+                        </div>
+                        <div class="border page-link text-- margin-top-xx">
+                            Learn More
+                        </div>
+                    </div>
+                    <a class="" href="https://product.birchequipment.com/">
+                        <img src="birch-screenshot.PNG">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="flex relative">
+        <div class="container flex">
+            <div class="header flex will-slide-in-left">
+                <h1>Contact</h1>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
