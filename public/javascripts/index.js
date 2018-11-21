@@ -35,7 +35,7 @@ function CheckAnimations() {
 
 $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
-    $.getJSON( "http://colormind.io/api", {"model":"default"}, function( data ) {
+    $.getJSON( "http://rossgrambo.com/color-theme", function( data ) {
         console.log(data);
     });
 }
