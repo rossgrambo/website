@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Ross Grambo' });
 });
 
-app.get('/color-theme', function(req, res) {
+router.get('/color-theme', function(req, res) {
     const data = JSON.stringify({"model":"default"});
 
     var post_options = {

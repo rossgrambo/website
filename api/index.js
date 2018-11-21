@@ -1,6 +1,7 @@
 /**
  * Created by rossg on 11/13/2018.
  */
+/*
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -40,3 +41,4 @@ function getColorTheme(req, res) {
 
 const port = process.env.port || 3000;
 app.listen(port);
+*/
