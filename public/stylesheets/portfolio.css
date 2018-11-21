@@ -1,0 +1,40 @@
+#portfolio {
+    background-color: var(--color-0);
+    color: var(--color-4);
+    padding-bottom: 64px;
+}
+
+.sample-holder {
+    flex-flow: wrap;
+}
+
+.sample {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    text-align: center;
+}
+
+.sample .flex-col {
+    justify-content: center;
+    height: 100%;
+}
+
+.sample img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sample img {
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.sample img:hover {
+    transition: 0.5s;
+    opacity: 0;
+}
