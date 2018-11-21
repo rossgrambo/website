@@ -1,12 +1,14 @@
-var express = require('express');
-var router = express.Router();
+/**
+ * Created by rossg on 11/13/2018.
+ */
+/*
+const express = require('express');
+const app = express();
+const http = require('http');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Ross Grambo' });
-});
+app.get('/color-theme', getColorTheme);
 
-router.get('/color-theme', function(req, res) {
+function getColorTheme(req, res) {
     const data = JSON.stringify({"model":"default"});
 
     var post_options = {
@@ -35,6 +37,8 @@ router.get('/color-theme', function(req, res) {
 
     subReq.write(data);
     subReq.end();
-});
+}
 
-module.exports = router;
+const port = process.env.port || 3000;
+app.listen(port);
+*/
