@@ -18,7 +18,7 @@ var colors = {
     "Go": "#2C3E50",
     "Swift": "#F1C40F",
     "PHP": "#bbbbbb",
-    "Skills": Color2
+    "Skills": Theme[2]
 };
 
 var totalSize = 0;

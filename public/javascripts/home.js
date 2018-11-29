@@ -2,14 +2,6 @@
  * Created by rossg on 11/1/2018.
  */
 function initHome() {
-    var bodyStyle = getComputedStyle(document.body);
-
-    var Color0 = bodyStyle.getPropertyValue("--color-0");
-    var Color1 = bodyStyle.getPropertyValue("--color-1");
-    var Color2 = bodyStyle.getPropertyValue("--color-2");
-    var Color3 = bodyStyle.getPropertyValue("--color-3");
-    var Color4 = bodyStyle.getPropertyValue("--color-4");
-
     var canvas = document.querySelector("canvas");
     var context = canvas.getContext("2d");
     canvas.width = $(window).width();
@@ -66,7 +58,7 @@ function initHome() {
                     index: nodeIndex,
                     x: Math.round(width / canvas.width) / 2 + Math.round(x / density) - width / 2,
                     y: Math.round(height / canvas.height) / 2 + Math.round(y / density) - height / 2,
-                    color: Color2,
+                    color: Theme[2],
                 };
 
                 if (nodeIndex % Math.ceil(width * density) === 0 || (nodeIndex + 1) % Math.ceil(width * density) === 0) {
@@ -116,7 +108,7 @@ function initHome() {
             simulation.force("charge", null);
         }
 
-        context.fillStyle = Color0;
+        context.fillStyle = Theme[0];
         context.fillRect(0, 0, canvas.width, canvas.height);
         context.save();
         context.translate(canvas.width / 2, canvas.height / 2);
@@ -136,7 +128,7 @@ function initHome() {
         context.beginPath();
         context.moveTo(l.source.x, l.source.y);
         context.lineTo(l.target.x, l.target.y);
-        context.strokeStyle = Color1;
+        context.strokeStyle = Theme[1];
         context.stroke();
     }
 
