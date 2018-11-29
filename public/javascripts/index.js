@@ -39,14 +39,14 @@ $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
     $.getJSON("http://node-express-env.tikhcr3v3q.us-west-2.elasticbeanstalk.com/color-theme", function( data ) {
         console.log(data);
-        var bodyStyle = getComputedStyle(document.body);
 
-        for (var i = 0; i < data.length; i++) {
-            bodyStyle.setProperty("--color-" + i, "rgb(" + data[i][0] + "," + data[i][1] + "," + data[i][2]+")", "");
+        for (var i = 0; i < data.result.length; i++) {
+            console.log(data.result[i]);
+            document.body.style.setProperty("--color-" + i, "rgb(" + data.result[i][0] + "," + data.result[i][1] + "," + data.result[i][2]+")", "");
+            console.log('Ye' + data.result[i]);
         }
 
         Theme = GetThemeFromCSS();
-
         initHome();
     });
 }
