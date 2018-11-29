@@ -26,7 +26,7 @@ function CheckAnimations() {
 
     for (var i = 0; i < animations.length; i++) {
         $(".will-"+animations[i]).each(function (j, obj) {
-            if (scroll_pos > $(this).offset().top + $(this).height()) {
+            if (scroll_pos > $(this).offset().top + ($(window).height()/3)) {
                 $(this).addClass(animations[i]);
             }
         });
@@ -35,7 +35,7 @@ function CheckAnimations() {
 
 $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
-    $.getJSON( "http://rossgrambo.com/color-theme", function( data ) {
+    $.getJSON("http://node-express-env.tikhcr3v3q.us-west-2.elasticbeanstalk.com/color-theme", function( data ) {
         console.log(data);
     });
 }
