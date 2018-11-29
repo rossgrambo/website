@@ -37,6 +37,10 @@ $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
     $.getJSON("http://node-express-env.tikhcr3v3q.us-west-2.elasticbeanstalk.com/color-theme", function( data ) {
         console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            bodyStyle.setProperty("--color-" + i, "rgb(" + data[i][0] + "," + data[i][1] + "," + data[i][2]+")");
+        }
+        initHome();
     });
 }
 
