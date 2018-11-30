@@ -51,7 +51,7 @@ function RandomizeTheme() {
 
         Theme = GetThemeFromCSS();
         initHome();
-        initAbout();
+        updateBreadcrumbs([], "");
     });
 }
 
