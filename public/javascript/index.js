@@ -37,8 +37,11 @@ function CheckAnimations() {
 
 $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
+    var themeButton = document.getElementsByClassName("randomize-theme");
+    var oldContent = replaceChildrenWithLoadingIcon(themeButton);
+
     $.getJSON("http://node-express-env.tikhcr3v3q.us-west-2.elasticbeanstalk.com/color-theme", function( data ) {
-        console.log(data);
+        themeButton.innerHTML = oldContent;
 
         for (var i = 0; i < data.result.length; i++) {
             console.log(data.result[i]);
@@ -48,9 +51,22 @@ function RandomizeTheme() {
 
         Theme = GetThemeFromCSS();
         initHome();
+        initAbout();
     });
 }
 
+function replaceChildrenWithLoadingIcon(element) {
+    var oldContent = element.innerHTML;
+
+    for (var j = 0; j < element.children.length; j++) {
+        element = element.removeChild(element.children[0]);
+    }
+    var loadingImg = document.createElement('img');
+    loadingImg.src = 'images/spinner-loading.gif';
+    element.appendChild(loadingImg);
+
+    return oldContent;
+}
 
 function GetThemeFromCSS() {
     var bodyStyle = getComputedStyle(document.body);
