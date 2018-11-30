@@ -37,8 +37,8 @@ function CheckAnimations() {
 
 $("#randomize-theme").click(RandomizeTheme);
 function RandomizeTheme() {
-    var themeButton = document.getElementsByClassName("randomize-theme");
-    var oldContent = replaceChildrenWithLoadingIcon(themeButton[0]);
+    var themeButton = document.getElementById("randomize-theme");
+    var oldContent = replaceChildrenWithLoadingIcon(themeButton);
 
     $.getJSON("http://node-express-env.tikhcr3v3q.us-west-2.elasticbeanstalk.com/color-theme", function( data ) {
         themeButton.innerHTML = oldContent;
