@@ -2,8 +2,6 @@
  * Created by rossg on 11/1/2018.
  */
 function initHome() {
-    var Theme = GetThemeFromCSS();
-
     var canvas = document.querySelector("canvas");
     var context = canvas.getContext("2d");
     canvas.width = $(window).width();

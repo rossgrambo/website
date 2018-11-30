@@ -2,8 +2,6 @@
  * Created by rossg on 11/1/2018.
  */
 function initAbout() {
-    var Theme = GetThemeFromCSS();
-
     var width = 400;
     var height = 400;
     var radius = Math.min(width, height) / 2;
